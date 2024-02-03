@@ -49,8 +49,14 @@ blog_posts = [
 ]
 
 
+def get_date(post):
+    return post["date"]
+
+
 def starting_page(request):
-    return render(request, "app/index.html")
+    sorted_post = sorted(blog_posts, key=get_date)
+    latest_post = sorted_post[-3:] if sorted_post else []
+    return render(request, "app/index.html", {"posts": latest_post})
 
 
 def posts(request):
