@@ -1,7 +1,7 @@
 {% load static %}
 <li>
     <article class="post">
-        <a href="">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
             <img class="mountain" src="{% static "app/images/mountain.jpg" %}" alt="Mountain Hiking" height="20" width="20" />
             <div class="post__content">
                 <h3>Mountain Hiking</h3>

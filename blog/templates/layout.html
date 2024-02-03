@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="{% static 'app.css' %}">
         <header id="main-navigation">
             <h1>
-                <a href="">Ankur's Blog</a>
+                <a href="{% url "starting-page" %}">Ankur's Blog</a>
             </h1>
             <nav>
-                <a href="">All posts</a>
+                <a href="{% url "posts-page" %}">All posts</a>
             </nav>
         </header>
         {% block css %}
