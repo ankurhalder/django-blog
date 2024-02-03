@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+    My My Posts
+{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/all-posts.css' %}" />
+{% endblock css %}
+{% block body %}
+    <section id="all-posts">
+        <h2>My Collected Posts</h2>
+        <ul>
+            <li>{% include "app/includes/post.html" %}</li>
+            <li>{% include "app/includes/post.html" %}</li>
+            <li>{% include "app/includes/post.html" %}</li>
+            <li>{% include "app/includes/post.html" %}</li>
+            <li>{% include "app/includes/post.html" %}</li>
+            <li>{% include "app/includes/post.html" %}</li>
+            <li>{% include "app/includes/post.html" %}</li>
+        </ul>
+    </section>
+{% endblock body %}

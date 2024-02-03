@@ -4,17 +4,10 @@
     My blog
 {% endblock title %}
 {% block css %}
+    <link rel="stylesheet" href="{% static 'app/includes/post.html' %}" />
     <link rel="stylesheet" href="{% static 'app/index.css' %}" />
 {% endblock css %}
 {% block body %}
-    <header id="main-navigation">
-        <h1>
-            <a href="">Ankur's Blog</a>
-        </h1>
-        <nav>
-            <a href="">All posts</a>
-        </nav>
-    </header>
     <section id="welcome">
         <header>
             <img src="{% static "app/images/Ankur_Halder.jpg" %}" alt="Ankur Halder - The Author of This Blog" height="20" width="20" />
@@ -24,17 +17,7 @@
     <section id="latest-posts">
         <h2>Latest Posts</h2>
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img class="mountain" src="{% static "app/images/mountain.jpg" %}" alt="Mountain Hiking" height="20" width="20" />
-                        <div class="post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p>I went mountain hiking and it was awesome. I saw a bear and a deer. I also saw a beautiful sunset.</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include "app/includes/post.html" %}
         </ul>
     </section>
     <section id="about">

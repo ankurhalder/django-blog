@@ -10,7 +10,16 @@
             {% block title %}
             {% endblock title %}
         </title>
+        <link rel="stylesheet" href="{% static 'app/includes/post.html' %}" />
         <link rel="stylesheet" href="{% static 'app.css' %}">
+        <header id="main-navigation">
+            <h1>
+                <a href="">Ankur's Blog</a>
+            </h1>
+            <nav>
+                <a href="">All posts</a>
+            </nav>
+        </header>
         {% block css %}
         {% endblock css %}
         {% block js %}

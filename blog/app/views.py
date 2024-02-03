@@ -6,7 +6,7 @@ def starting_page(request):
 
 
 def posts(request):
-    pass
+    return render(request, "app/all-posts.html")
 
 
 def post_details(request):
