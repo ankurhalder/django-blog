@@ -1,7 +1,53 @@
 {% extends "layout.html" %}
+{% load static %}
 {% block title %}
     My blog
 {% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/index.css' %}" />
+{% endblock css %}
 {% block body %}
-    <h1>Welcome to my blog</h1>
+    <header id="main-navigation">
+        <h1>
+            <a href="">Ankur's Blog</a>
+        </h1>
+        <nav>
+            <a href="">All posts</a>
+        </nav>
+    </header>
+    <section id="welcome">
+        <header>
+            <img src=""
+                 alt="Ankur Halder - The Author of This Blog"
+                 height="20"
+                 width="20" />
+            <h2>ANKUR'S BLOG</h2>
+        </header>
+    </section>
+    <section id="latest-posts">
+        <h2>Latest Posts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking" height="20" width="20" />
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>I went mountain hiking and it was awesome. I saw a bear and a deer. I also saw a beautiful sunset.</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            Hi, I'm Ankur Halder. I'm a software developer and this is my blog. I write about programming, technology and other things that interest me.
+        </p>
+        <p>
+            I'm also a mountain hiker. I love to hike in the mountains. I also love to take photos of the mountains and the wildlife.
+        </p>
+        <p>I hope you enjoy reading my blog. If you have any questions or comments, feel free to contact me.</p>
+    </section>
 {% endblock body %}
